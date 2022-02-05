@@ -10,10 +10,41 @@
 print("Hello world!")
 
 // Using let and var for constants and variables
+var myVariable = 32
+myVariable = 35
+let myConstant = 69
+
+// explicit vs implicit
+let implicitInteger = 70
+let implicitDouble = 70.0
+let explicitDouble: Double = 70
+
+// создайте Константу с явным типом Float и присвойте значение 4
+let myNewConstant: Float = 4
+
+// converting one to another
+let label = "My height is "
+let height = 172
+let heightLabel = label + String(height)
+
+// \() could be used to add something to String
+let chevapcheechee = 3
+let pljeskavica = 5
+let chavapSummary = "I ate \(chevapcheechee) chevapi"
+let mealSummary = "Total portion is \(chevapcheechee) chevapi and \(pljeskavica) pleskavicas"
+
+// multistring string
+let quotation = """
+    Here is some test.
+    That contains several strings
+    And also it can contain \(chevapcheechee) chevap
+    """
+
+
 
 </string>
 			<key>ModifiedRange</key>
-			<string>{1, 96}</string>
+			<string>{1, 874}</string>
 			<key>OriginalContent</key>
 			<string></string>
 			<key>OriginalRange</key>
