@@ -37,14 +37,35 @@ let mealSummary = "Total portion is \(chevapcheechee) chevapi and \(pljeskavica)
 let quotation = """
     Here is some test.
     That contains several strings
-    And also it can contain \(chevapcheechee) chevap
+    "And also it can contain \(chevapcheechee) chevap"
     """
 
+// Arrays and Dictionaries use []
+var shoppingList = ["smetana", "kefir"]
+shoppingList[1] = "moloko"
 
+var occupations = [
+    "Vasko": "QA",
+    "Lerok": "ECE",
+]
+occupations["Mike"] = "Driver"
+print(occupations)
+
+// To add to Array
+shoppingList.append("tvorog")
+print(shoppingList)
+
+// to create empty ones
+let emptyArray = [String]()
+let emptyDictionary = [String: Float]()
+
+// to make implicit
+shoppingList = []
+occupations = [:]
 
 </string>
 			<key>ModifiedRange</key>
-			<string>{1, 874}</string>
+			<string>{1, 1308}</string>
 			<key>OriginalContent</key>
 			<string></string>
 			<key>OriginalRange</key>
