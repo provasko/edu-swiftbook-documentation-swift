@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// if and switch
+let individualScores = [75, 43, 103, 87, 12]
+var teamScore = 0
+for score in individualScores {
+    if score &gt; 50 {
+        teamScore += 3
+    } else {
+        teamScore += 1
+    }
+}
+
+var optionalString: String? = "Hello"
+print(optionalString == nil)
+
+var optionalName: String? = "Vasko Kor"
+var greeting = "Hello!"
+if let name = optionalName {
+    greeting = "Hello, \(name)"
+}
+
+let nickName: String? = nil
+let fullName: String = "Lerka Kor"
+let informalGreeting = "Hi \(nickName ?? fullName)"
+
+let vegetable = "green pepper"
+switch vegetable {
+case "cucumber":
+    print("Too green")
+case "carrot", "batat":
+    print("Too orange")
+case let x where x.hasSuffix("pepper"):
+    print("Is it spicy?")
+default:
+    print("Anyway I like vegitables") 
+}
+
+
+let interestingNumbers = [
+    "Prime": [2, 3, 5, 7, 11, 13],
+    "Fibonacci": [1, 1, 2, 3, 5, 8],
+    "Square": [1, 4, 9, 16, 25],
+]
+var largest = 0
+for (_, numbers) in interestingNumbers {
+    for number in numbers {
+        if number &gt; largest {
+            largest = number
+        }
+    }
+}
+print(largest)
+
+var n = 2
+while n &lt; 100 {
+    n *= 2
+}
+print(n)
+
+var m = 2
+repeat {
+    m *= 2
+} while m &lt; 100
+print(m)
+
+var firstLoop = 0
+for i in 0..&lt;4 {
+    firstLoop += 1
+}
+print(firstLoop)
+
+var secondLoop = 0
+for i in 0...4 {
+    secondLoop += 1
+}
+print(secondLoop)
+
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{1, 1337}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{1, 0}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>
