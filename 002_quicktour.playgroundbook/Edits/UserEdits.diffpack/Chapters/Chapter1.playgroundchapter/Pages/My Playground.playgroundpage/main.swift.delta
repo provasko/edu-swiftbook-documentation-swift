@@ -86,12 +86,85 @@ print(secondLoop)
 func  greet(name: String, day: String) -&gt; String {
     return "Hello \(name), today is \(day)"
 }
-greet(name: "Masha", day: "Friday")
+print(greet(name: "Masha", day: "Friday"))
 
+func greet2(_ name2: String, on day2: String) -&gt; String {
+    return "Hello \(name2), today is \(day2)"
+}
+print(greet2("Dasha", on: "Saturday"))
+
+func calculateStats(scores: [Int]) -&gt; (min: Int, max: Int, sum: Int) {
+    var min = scores[0]
+    var max = scores[0]
+    var sum = 0
+    
+    for score in scores {
+        if score &gt; max {
+            max = score
+        } else if score &lt; min {
+            min = score
+        }
+        sum += score
+    }
+    return (min, max, sum)
+}
+let stats = calculateStats(scores: [5, 3, 100, 3, 9])
+print(stats.sum)
+print(stats.2)
+
+// Inner functions
+func returnFifteen() -&gt; Int {
+    var y = 10
+    func add() {
+        y += 5
+    }
+    add()
+    return y
+}
+print(returnFifteen())
+
+// Function could be result
+func makeIncrementer() -&gt; ((Int) -&gt; Int) {
+    func addOne(number: Int) -&gt; Int{
+        return 1 + number
+    }
+    return addOne
+}
+var increment = makeIncrementer()
+increment(7)
+
+// Function could be argument
+func hasAnyMatches(list: [Int], condition: (Int) -&gt; Bool) -&gt; Bool {
+    for item in list {
+        if condition(item) {
+            return true
+        }
+    }
+    return false
+}
+func lessThanTen(number: Int) -&gt; Bool {
+    return number &lt; 10
+}
+var numbers = [20, 19, 7, 12]
+hasAnyMatches(list: numbers, condition: lessThanTen)
+
+// Closures
+numbers.map({ (number: Int) -&gt; Int in
+    let result = 3 * number
+    return result
+})
+
+// Closures - condensed
+let mappedNumbers = numbers.map({ number in 3 * number })
+print(mappedNumbers)
+
+// arguments: names -&gt; numbers
+let sortedNumbers = numbers.sorted { $0 &gt; $1 }
+print(sortedNumbers)
 
 </string>
 			<key>ModifiedRange</key>
-			<string>{1, 1484}</string>
+			<string>{1, 3081}</string>
 			<key>OriginalContent</key>
 			<string></string>
 			<key>OriginalRange</key>
