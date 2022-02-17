@@ -60,9 +60,31 @@ triangle.perimeter = 9.9
 print(triangle.sideLength)
 
 
+class TriangleAndSquare {
+    var triangle: EquatorTriangle {
+        willSet {
+            square.sideLength = newValue.sideLength
+        }
+    }
+    var square: Square {
+        willSet {
+            triangle.sideLength = newValue.sideLength
+        }
+    }
+    init(size: Double, name: String) {
+        square = Square(sideLength: size, name: name)
+        triangle = EquatorTriangle(sideLength: size, name: name)
+    }
+}
+var triangleAndSquare = TriangleAndSquare(size: 10, name: "another test shape")
+print(triangleAndSquare.square.sideLength)
+print(triangleAndSquare.triangle.sideLength)
+triangleAndSquare.square = Square(sideLength: 50, name: "larger square")
+print(triangleAndSquare.triangle.sideLength)
+
 </string>
 			<key>ModifiedRange</key>
-			<string>{1, 1177}</string>
+			<string>{1, 1891}</string>
 			<key>OriginalContent</key>
 			<string></string>
 			<key>OriginalRange</key>
